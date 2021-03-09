@@ -22,11 +22,11 @@
 
 ## Usage
 
-- node server.js
+- `node server.js`
 
 or with nodemon
 
-- npm run dev
+- `npm run dev`
 
 GET http://localhost:3000/api/products gets all products
 
