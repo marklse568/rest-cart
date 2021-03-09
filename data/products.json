@@ -16,5 +16,11 @@
     "name": "Sandwich",
     "description": "Juicy, crispy, delicious clubhouse sandwich",
     "price": 6.99
+  },
+  {
+    "id": "d28789da-21b5-4f34-92d2-c950111bef62",
+    "name": "test product",
+    "description": "test test",
+    "price": 89.99
   }
 ]

@@ -38,7 +38,7 @@ async function createProduct(req, res) {
       description: 'test test',
       price: 89.99,
     };
-    const newProduct = product.create(product);
+    const newProduct = Product.create(product);
     res.writeHead(201, { 'Content-Type': 'application/json' });
     return res.end(JSON.stringify(newProduct));
   } catch (error) {
