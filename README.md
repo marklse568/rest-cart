@@ -12,6 +12,8 @@
 
 - MVC file system
 
+- Postman
+
 ## Requires
 
 - Node.js
@@ -25,3 +27,9 @@
 or with nodemon
 
 - npm run dev
+
+GET http://localhost:3000/api/products gets all products
+
+GET http://localhost:3000/api/product:id gets product by id
+
+POST http://localhost:3000/api/products posts new product if you provide JSON body data
