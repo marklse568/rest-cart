@@ -17,8 +17,6 @@
 ## Requires
 
 - Node.js
-- (maybe) uuid
-  - `npm i -D uuid`
 
 ## Usage
 
