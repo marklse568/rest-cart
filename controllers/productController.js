@@ -1,5 +1,6 @@
 const Product = require('../models/productModel');
 
+const { getPostData } = require('../utils');
 // get all products
 // GET /api/products
 async function getProducts(req, res) {
