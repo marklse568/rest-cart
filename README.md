@@ -17,8 +17,8 @@
 ## Requires
 
 - Node.js
-- (maybe) nodemon, uuid
-  - `(npm i -D nodemon/npm i -D uuid)`
+- (maybe) uuid
+  - `npm i -D uuid`
 
 ## Usage
 
