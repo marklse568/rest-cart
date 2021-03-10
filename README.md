@@ -8,7 +8,7 @@
 
 - VSCode
 
-  - Prettier, CLRF
+  - Prettier
 
 - MVC file system
 
