@@ -30,6 +30,6 @@ or with nodemon
 
 GET http://localhost:3000/api/products gets all products
 
-GET http://localhost:3000/api/product:id gets product by id
+GET http://localhost:3000/api/products/:id gets product by id
 
 POST http://localhost:3000/api/products posts new product if you provide JSON body data
