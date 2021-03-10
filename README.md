@@ -33,3 +33,5 @@ GET http://localhost:3000/api/products gets all products
 GET http://localhost:3000/api/products/:id gets product by id
 
 POST http://localhost:3000/api/products posts new product if you provide JSON body data
+
+PUT http://localhost:3000/api/products/:id updates product if you provide JSON body data
