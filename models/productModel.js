@@ -1,4 +1,4 @@
-const products = require('../data/products.json');
+let products = require('../data/products.json');
 const { v4: uuidv4 } = require('uuid'); //for creating random/unique ids
 const { writeDataToFile } = require('../utils');
 
@@ -26,7 +26,7 @@ function create(product) {
 
 function update(id, product) {
   return new Promise((resolve, reject) => {
-    const index = product.findIndex((p) => p.id === id);
+    const index = products.findIndex((p) => p.id === id);
     products[index] = { id, ...product };
     writeDataToFile('./data/products.json', products);
     resolve(products[index]);
