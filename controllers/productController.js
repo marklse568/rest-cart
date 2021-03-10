@@ -1,10 +1,6 @@
 const Product = require('../models/productModel');
 
 const { getPostData } = require('../utils');
-<<<<<<< HEAD
-
-=======
->>>>>>> features
 // get all products
 // GET /api/products
 async function getProducts(req, res) {
@@ -45,11 +41,6 @@ async function createProduct(req, res) {
       description,
       price,
     };
-<<<<<<< HEAD
-    const newProduct = await Product.create(product);
-    res.writeHead(201, { 'Content-Type': 'application/json' }); //201 = created success code
-    return res.end(JSON.stringify(newProduct));
-=======
 
     const newProduct = await Product.create(product);
     res.writeHead(201, { 'Content-Type': 'application/json' });
@@ -80,7 +71,6 @@ async function updateProduct(req, res, id) {
       res.writeHead(200, { 'Content-Type': 'application/json' });
       return res.end(JSON.stringify(updatedProduct));
     }
->>>>>>> features
   } catch (error) {
     console.log(error);
   }
