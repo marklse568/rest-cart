@@ -20,9 +20,15 @@
 
 ## Usage
 
+Install dependencies
+
+- `npm install`
+
+Run
+
 - `node server.js`
 
-or with nodemon
+Or run with nodemon
 
 - `npm run dev`
 
