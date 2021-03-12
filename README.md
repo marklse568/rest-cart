@@ -46,6 +46,8 @@ Or run with nodemon
 
 ## Learning Resources
 
+- [Node.js Docs](https://nodejs.org/dist/latest-v14.x/docs/api/)
+
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
 
 - [Node Cheat Sheet](https://overapi.com/nodejs)
