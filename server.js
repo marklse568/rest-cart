@@ -1,5 +1,9 @@
 const http = require('http');
 const {
+  deleteProductFromCart,
+  getCart,
+} = require('./controllers/cartController');
+const {
   getProducts,
   getProduct,
   createProduct,
@@ -30,6 +34,14 @@ const server = http.createServer((req, res) => {
   ) {
     const id = req.url.split('/')[3];
     deleteProduct(req, res, id);
+  } else if (
+    req.url.match(/\/api\/cart\/([0-9]+)/) &&
+    req.method === 'DELETE'
+  ) {
+    const id = req.url.split('/')[3];
+    deleteProductFromCart(req, res, id);
+  } else if (req.url === '/api/cart' && req.method === 'GET') {
+    getCart(req, res);
   } else {
     res.writeHead(404, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ message: 'Not Found' }));
