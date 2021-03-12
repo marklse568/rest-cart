@@ -44,6 +44,13 @@ Or run with nodemon
 
 <br>
 
+| METHOD |                URL                 |            USE            |
+| :----: | :--------------------------------: | :-----------------------: |
+|  GET   |   http://localhost:3000/api/cart   | gets all products in cart |
+| DELETE | http://localhost:3000/api/cart/:id |  deletes product in cart  |
+
+<br>
+
 ## Learning Resources
 
 - [Node.js Docs](https://nodejs.org/dist/latest-v14.x/docs/api/)
