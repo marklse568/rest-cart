@@ -34,9 +34,15 @@ async function deleteProductFromCart(req, res, id) {
 async function addToCart(req, res, id) {
   try {
     const product = await Product.findById(id);
-    await Cart.add(product);
-    res.writeHead(201, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ message: `Product ${id} added to Cart` }));
+    const productInCart = await Cart.findByIdCart(id);
+    if (productInCart) {
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: 'Product already in cart' }));
+    } else {
+      await Cart.add(product);
+      res.writeHead(201, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: `Product ${id} added to Cart` }));
+    }
   } catch (error) {
     console.log(error);
   }
