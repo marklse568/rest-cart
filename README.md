@@ -63,11 +63,11 @@ Or run with nodemon
 
 To post a new product in the products.json, you could:
 
-- POST http://localhost:3000/api/products and add { "id": 5, "description": "hello world" } in the raw JSON body in the request
+- `POST http://localhost:3000/api/products` and add `{ "id": 5, "description": "hello world" }` in the raw JSON body in the request
 
 To change the quantity of a product with the id: 1 in the cart to 7, you could:
 
-- PUT http://localhost:3000/api/cart/1 and add { "quant": 7 } in the raw JSON body in the request
+- `PUT http://localhost:3000/api/cart/1` and add `{ "quant": 7 }` in the raw JSON body in the request
 
 ## TODO
 
