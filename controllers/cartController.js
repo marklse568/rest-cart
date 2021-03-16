@@ -24,7 +24,7 @@ async function deleteProductFromCart(req, res, id) {
     } else {
       await Cart.removec(id);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ message: `Product ${id} deleted` }));
+      res.end(JSON.stringify({ message: `Product ${id} removed from cart` }));
     }
   } catch (error) {
     console.log(error);
@@ -33,8 +33,7 @@ async function deleteProductFromCart(req, res, id) {
 
 async function addToCart(req, res, id) {
   try {
-    const product = Product.findById(id);
-    console.log(product);
+    const product = await Product.findById(id);
     await Cart.add(product);
     res.writeHead(201, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ message: `Product ${id} added to Cart` }));

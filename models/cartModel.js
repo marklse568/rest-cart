@@ -1,5 +1,4 @@
 let cart = require('../data/cart.json');
-let products = require('../data/products.json');
 const { writeDataToFile } = require('../utils');
 
 function removec(id) {
@@ -18,15 +17,15 @@ function findAll() {
 
 function findByIdCart(id) {
   return new Promise((resolve, reject) => {
-    const productInCart = cart.find((p) => p.id === id);
+    const productInCart = cart.find((p) => p.id == id);
     resolve(productInCart);
   });
 }
 
 function add(product) {
   return new Promise((resolve, reject) => {
-    console.log(product);
     cart.push(product);
+    writeDataToFile('./data/cart.json', cart);
     resolve();
   });
 }
