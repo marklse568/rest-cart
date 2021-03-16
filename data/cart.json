@@ -1,1 +1,1 @@
-[{"id":"1","name":"PS5","description":"Next-Gen Gaming Console","price":299.99},{"id":"2","name":"AirPods","description":"yepp rock","price":199.99}]
+[{"id":"1","quant":3,"name":"PS5","description":"Next-Gen Gaming Console","price":299.99},{"id":"2","quant":7,"name":"AirPods","description":"yepp rock","price":199.99}]

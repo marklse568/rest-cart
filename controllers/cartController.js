@@ -1,5 +1,6 @@
 const Cart = require('../models/cartModel');
 const Product = require('../models/productModel');
+const { getPostData } = require('../utils');
 
 //lists all products in cart
 //GET /api/cart
@@ -48,8 +49,33 @@ async function addToCart(req, res, id) {
   }
 }
 
+async function changeQuantity(req, res, id, quant) {
+  try {
+    const productInCart = await Cart.findByIdCart(id);
+    if (!productInCart) {
+      res.writeHead(404, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: 'Product Not Found' }));
+    } else {
+      const body = await getPostData(req);
+      const { quant, name, description, price } = JSON.parse(body);
+      const productData = {
+        quant: quant || productInCart.quant,
+        name: name || productInCart.name,
+        description: description || productInCart.description,
+        price: price || productInCart.price,
+      };
+      await Cart.change(id, productData);
+      res.writeHead(201, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ message: `Quantity changed to ${quant}` }));
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 module.exports = {
   getCart,
   deleteProductFromCart,
   addToCart,
+  changeQuantity,
 };

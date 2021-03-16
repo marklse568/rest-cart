@@ -3,6 +3,7 @@ const {
   deleteProductFromCart,
   getCart,
   addToCart,
+  changeQuantity,
 } = require('./controllers/cartController');
 const {
   getProducts,
@@ -46,6 +47,9 @@ const server = http.createServer((req, res) => {
   } else if (req.url.match(/\/api\/cart\/([0-9]+)/) && req.method === 'POST') {
     const id = req.url.split('/')[3];
     addToCart(req, res, id);
+  } else if (req.url.match(/\/api\/cart\/([0-9]+)/) && req.method === 'PUT') {
+    const id = req.url.split('/')[3];
+    changeQuantity(req, res, id);
   } else {
     res.writeHead(404, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ message: 'Not Found' }));

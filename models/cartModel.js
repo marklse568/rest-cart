@@ -30,9 +30,19 @@ function add(product) {
   });
 }
 
+function change(id, productData) {
+  return new Promise((resolve, reject) => {
+    const index = cart.findIndex((p) => p.id === id);
+    cart[index] = { id, ...productData };
+    writeDataToFile('./data/cart.json', cart);
+    resolve(cart[index]);
+  });
+}
+
 module.exports = {
   removec,
   findAll,
   findByIdCart,
   add,
+  change,
 };
