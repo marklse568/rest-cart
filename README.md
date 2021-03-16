@@ -10,7 +10,7 @@
 - VS Code
 
   - Prettier
-  - VS Code is my favorite Texteditor/IDE
+  - VS Code is my favorite text editor/IDE
 
 - MVC file system
 
