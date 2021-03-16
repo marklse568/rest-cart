@@ -1,18 +1,24 @@
-# rest-cart
+# rest-cart - A Vanilla Node.js Shopping Cart API
 
-## Stuff I used
+## Techstack
 
 - Vanilla Node.js
 
   - uuid, nodemon
+  - I chose Vanilla Node.js because I think it's important to know what goes on behind the scenes in frameworks like Express.js
 
-- VSCode
+- VS Code
 
   - Prettier
+  - VS Code is my favorite Texteditor/IDE
 
 - MVC file system
 
+  - This is an important concept that is necessary in creating enterprise software
+
 - Postman
+
+  - self-explanatory
 
 ## Requires
 
@@ -44,12 +50,28 @@ Or run with nodemon
 
 <br>
 
-| METHOD |                URL                 |            USE            |
-| :----: | :--------------------------------: | :-----------------------: |
-|  GET   |   http://localhost:3000/api/cart   | gets all products in cart |
-| DELETE | http://localhost:3000/api/cart/:id |  deletes product in cart  |
+| METHOD |                URL                 |                      USE                       |
+| :----: | :--------------------------------: | :--------------------------------------------: |
+|  GET   |   http://localhost:3000/api/cart   |           gets all products in cart            |
+| DELETE | http://localhost:3000/api/cart/:id |            deletes product in cart             |
+|  POST  | http://localhost:3000/api/cart/:id |       adds product to cart by product id       |
+|  PUT   | http://localhost:3000/api/cart/:id | changes quantity attribute with JSON body data |
 
 <br>
+
+### Examples
+
+To post a new product in the products.json, you could:
+
+- POST http://localhost:3000/api/products and add { "id": 5, "description": "hello world" } in the raw JSON body in the request
+
+To change the quantity of a product with the id: 1 in the cart to 7, you could:
+
+- PUT http://localhost:3000/api/cart/1 and add { "quant": 7 } in the raw JSON body in the request
+
+## TODO
+
+- give each cart array a unique id
 
 ## Learning Resources
 
