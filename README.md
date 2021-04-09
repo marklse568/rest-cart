@@ -66,7 +66,7 @@ To change the quantity of a product with the id: 1 in the cart to 7, you could:
 ## Motivation and Thought Process
 
 This project was created as a coding test in the context of an application for an apprentice position.
-Overall this is not meant to be an enterprise-ready product but rather a learning experience since I previously had no experience working with JavaScript and Node.js.
+Overall this is not meant to be an enterprise-ready product but rather a learning experience since I previously had no experience working with Node.js.
 
 ### Tech choices:
 
